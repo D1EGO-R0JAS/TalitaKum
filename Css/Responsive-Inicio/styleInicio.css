@@ -1,0 +1,367 @@
+/*Estilos por defecto 1*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+ }
+ html{
+     font-size: 62.5%;
+ }
+ :root{
+     --color-blue:#6B98BF;
+     --color-pink: #D98FBF;
+     --color-footer: #2B2730;
+     --title: "Bree Serif", serif;
+     --Text-1: "EB Garamond", serif;
+     --Text-2: font-family: "Montserrat", sans-serif;
+ }
+ /*Fin 1*/
+ /*Diseño del header - 2*/
+ .menu{
+     width: 100%;
+     min-height: 65px;
+     height: 12vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 5px;
+     position: relative;
+ }
+ .icono{
+     width: 25%;
+     height: 100%;
+     justify-items: center;
+ }
+ .icono img{
+     width: 70px;
+     height: 100%;
+ }
+ .slogan{
+   text-align: center;
+ }
+ .slogan h2{
+     font-size: 1.5rem;
+     padding: 5px;
+     font-weight: 400;
+     font-family: var(--title);
+     color: var(--color-pink);
+ }
+ .contenedorH{
+    width: 25%;
+    height: 100%;
+    position: relative;
+ }
+ .menu ul{
+    list-style: none;
+    display: flex;
+    margin-left: 5%;
+    width: 25%;  
+ }
+  .menu ul li{
+    margin: 0 5px;
+ }
+ .menu li a {
+    text-decoration: none;
+    color: var(--color-blue);
+    font-size: 1.6rem;
+    font-family: var(--Text-2);
+    font-weight: bold;
+    margin: 0 10px;
+ }
+ .menuH{
+    width: 40px;
+    cursor: pointer;
+    display: none;
+ }
+ 
+ .menuH img{
+     max-width: 100%;
+     height: 100%;
+ }
+ @media (max-width:689px) {
+    .menuH{
+        display: flex;
+        position: absolute;
+        top: 20%;
+        right: 1%;
+    }
+    .menu ul{
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--color-footer);
+        top: 12vh;
+        width: 100%;
+        align-items: center;
+        transform: translate(-100%);
+        transition: transform .5s;
+        z-index: 4;        
+        margin-left: 0%;  
+    }
+    .menu ul.aparecer{
+        transform: translate(0);
+     }
+    .menu ul li{
+        margin: 30px 0;
+    }
+    .menu ul li a{
+        color: white;
+    }
+ }
+ /*Fin 2*/
+ /*Comienzo del diseño del main - 3*/
+ /*Diseño del Carrusel - 3.1*/
+ .slider-box{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: var(--color-blue);
+    margin: 0;
+ }
+ .slider-box ul{
+    display: flex;
+    width: 400%;
+    animation: slide 20s infinite alternate ease-in-out;
+ }
+ .slider-box li{
+    width: 100%;
+    list-style: none;
+    position: relative;
+ }
+ .slider-box img{
+    width: 100%;
+}
+@keyframes slide {
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+/*Fin 3.1*/
+/*Diseño seccion informacion - 3.2*/
+.info{
+    width: 100%;
+    min-height: 350px;
+    height: auto;
+    background-color: var(--color-blue);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+.info h1{
+    font-size: 2.4rem;
+    margin: 15px 0;
+    font-family: var(--title);
+    font-weight: 400;
+}
+.div-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.info-figure{
+    width: 45%;
+    max-width: 250px;
+    height: auto;
+    margin: 15px 0;
+}
+.info-figure img{
+    width: 100%;
+    height: 100%;
+}
+.extra{
+    display: none;
+    font-size: 2rem;
+    text-align: justify;
+    padding: 10px;
+    font-family: var(--Text-1);
+    font-weight: 500;
+}
+.original{
+    font-size: 2rem;
+    display: inline;
+    text-align: justify;
+    padding: 10px;
+    font-family: var(--Text-1);
+    font-weight: 500;
+}
+input[type="checkbox"]{
+    height: 2em;
+    display: block;
+    appearance: none;
+}
+label{
+    position: relative;
+    padding: 1em;
+    background-color: var(--color-footer);
+    color: white;
+    cursor: pointer;
+}
+label::before{
+    content: 'Leer Mas';
+}
+input[type='checkbox']:checked ~ label::before{
+    content: 'Leer Menos';
+}
+.dots:has(~input[type='checkbox']:checked){
+    display: none;
+}
+.extra:has(~ input[type='checkbox']:checked){
+    display: inline;
+}
+/*Fin 3.2*/
+/*Diseño seccion empleados - 3.3*/
+.empleados{
+    width: 100%;
+    height: auto;
+    background-color: var(--color-pink);
+    padding-bottom: 10px;
+}
+.empleados h2{
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 20px;
+    font-family: var(--title);
+    font-weight: 400;
+    color: white;
+}
+.empleados-div{
+    display: grid;
+    grid-template-columns: repeat(4,280px);
+    margin: 20px 40px;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+.target{
+    display: grid;
+    grid-template-columns: repeat(6,1fr) ;
+    grid-template-rows: repeat(8,1fr);
+    scroll-snap-align: center;
+    background-color: #2b273080;
+    border-radius: 15px;
+    align-items: center;
+}
+.target-figure{
+    grid-area: 2/2/7/6;
+}
+.target-figure img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.target h3{
+    text-align: center;
+    grid-area: 7/2/8/6;
+    font-size: 1.8rem;
+    color: white;
+    font-family: var(--title);
+    font-weight: 500;
+}
+.target p{
+    font-size: 1.7rem;
+    grid-area: 8/2/9/6;
+    text-align: center;
+    color: white;
+    font-family: var(--Text-2);
+}
+/*Fin 3.3*/
+/*Diseño de Noticias 3.4*/
+.s-news{
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+.s-news h2{
+    font-size: 2.2rem;
+    text-align: center;
+    padding: 20px;
+    font-family: var(--title);
+    font-weight: 400;
+    color: var(--color-footer);
+}
+.news{
+    display: grid;
+    grid-template-columns: repeat(5,280px);
+    margin: 5px 40px;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+.new img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    scroll-snap-align: center;
+}
+/*Fin 3.4*/
+/*Diseño del Footer*/
+footer{
+    background-color: var(--color-footer);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+.text {
+    width: 100%;
+    height: 45%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.text li {
+    list-style: none;
+    color: white;
+}
+.text li a {
+    text-decoration: none;
+    color: white;
+}
+.b-text li {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin: 1.2vh 6vw;
+}
+.b-text img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 0px;
+}
+.socialIcons {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.b-icon {
+    text-align: center;
+}
+.b-icon li {
+    list-style: none;
+    display: inline;
+    margin: 0 15px;
+}
+.socialIcons img {
+    width: 30px;
+    height: 30px;
+}

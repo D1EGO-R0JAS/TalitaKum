@@ -1,0 +1,74 @@
+.menu ul{
+    width: 30%;
+    max-width: 350px;
+    margin-left: 4%;
+}
+.slogan h2{
+    font-size: 2rem;
+}
+.menu ul a{
+    font-size: 2rem;
+}
+.info h1{
+    font-size: 3.2rem;
+}
+.text-container p{
+    font-size: 2.4rem;
+    padding: 5px;
+}
+input[type="checkbox"]{
+    height: 2em;
+    display: none;
+    appearance: none;
+}
+label{
+    position: relative;
+    padding: 1em;
+    background-color: var(--color-footer);
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+.dots{
+    display: none;
+}
+.extra{
+    display: inline;
+}
+.empleados h2{
+    font-size: 3rem;
+}
+.s-news h2{
+    font-size: 3rem;
+}
+@media (min-width:1234px) {
+    .empleados-div{
+        justify-content: center;
+    }
+}
+@media (min-width:1522px) {
+    .news{
+        justify-content: center;
+    }
+}
+footer{
+    flex-direction: row;
+    justify-content: center;
+}
+.text{
+    width: 45%;
+}
+.b-text li{
+    margin: 1vh 4vw;
+    font-size: 2.4rem;
+}
+.socialIcons{
+    height: auto;
+    width: 25%;
+    margin: 10px 0;
+}
+.socialIcons img{
+    width: 40px;
+    height: 40px;
+    margin: 5px 0;
+}

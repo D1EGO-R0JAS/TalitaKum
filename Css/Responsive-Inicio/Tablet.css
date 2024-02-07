@@ -1,0 +1,17 @@
+.icono{
+    width: 10%;
+}
+.contenedorH{
+    width: 2%;
+}
+.menu ul{
+    margin: 0;
+    width: 40%;
+}
+.div-info{
+    flex-direction: row;
+    justify-content: center;
+}
+.text-container{
+    width: 55%;
+}
